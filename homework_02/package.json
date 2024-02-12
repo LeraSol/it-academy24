@@ -1,11 +1,12 @@
 {
-  "name": "homework_02",
+  "name": "it-academy24",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {

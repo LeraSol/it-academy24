@@ -1,19 +1,20 @@
-const fs = require('fs-extra')
+const fs = require('fs-extra');
 
-const file = '\\Users\\USER\\it-academy24\\homework_02\\one\\file.txt'
-fs.ensureFileSync(file)
+fs.ensureDirSync("one");
 
-fs.ensureDirSync('two')
+fs.ensureFileSync('one/file.txt');
 
-fs.moveSync('\\Users\\USER\\it-academy24\\homework_02\\one\\file.txt', '\\Users\\USER\\it-academy24\\homework_02\\two\\file.txt')
+fs.ensureDirSync('two');
 
-fs.ensureDirSync('three')
+fs.moveSync('one/file.txt', 'two/file.txt');
 
-fs.copySync('\\Users\\USER\\it-academy24\\homework_02\\two\\file.txt', '\\Users\\USER\\it-academy24\\homework_02\\three\\new_file.txt')
+fs.ensureDirSync('three');
 
-fs.removeSync('\\Users\\USER\\it-academy24\\homework_02\\two\\file.txt')
-fs.removeSync('\\Users\\USER\\it-academy24\\homework_02\\three\\new_file.txt')
+fs.copySync('two/file.txt', 'three/file.txt');
 
-fs.removeSync('\\Users\\USER\\it-academy24\\homework_02\\one')
-fs.removeSync('\\Users\\USER\\it-academy24\\homework_02\\two')
-fs.removeSync('\\Users\\USER\\it-academy24\\homework_02\\three')
+fs.removeSync('two/file.txt');
+fs.removeSync('three/file.txt');
+
+fs.removeSync('one');
+fs.removeSync('two');
+fs.removeSync('three');
