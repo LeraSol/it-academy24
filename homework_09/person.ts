@@ -31,4 +31,4 @@ const fourthPerson: person = {
     role: 'World saver'
 }
 
-console.log(secondPerson, fourthPerson)
+console.log(firstPerson, secondPerson, thirdPerson, fourthPerson)

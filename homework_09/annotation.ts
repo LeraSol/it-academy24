@@ -23,4 +23,4 @@ export class ObjectManipulator {
 
 const admin= {name: 'Valeria', lastName: 'Petrova', age: 23};
 const manipulator = new ObjectManipulator(admin);
-console.log(manipulator.get("age"))
+console.log(manipulator.get('age'))
