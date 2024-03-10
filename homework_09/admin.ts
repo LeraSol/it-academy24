@@ -1,31 +1,27 @@
-interface User {
-    name: string,
-    age: number,
-    occupation: string,
-}
+import { User } from './user';
 
-interface Admin {
+interface Admin extends User{
     role:string,
 }
 
-type person = User | Admin;
+type admin = User | Admin;
 
-const firstPerson: person = {
+const firstPerson: admin = {
     name: 'Max Mustermann',
     age: 25,
     occupation: 'Chimney sweep'
 }
-const secondPerson: person = {
+const secondPerson: admin = {
     name: 'Jane Doe',
     age: 32,
     role: 'Administrator'
 }
-const thirdPerson: person = {
+const thirdPerson: admin = {
     name: 'Kate Müller',
     age: 23,
     occupation: 'Astronaut'
 }
-const fourthPerson: person = {
+const fourthPerson: admin = {
     name: 'Bruce Willis',
     age: 64,
     role: 'World saver'
