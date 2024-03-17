@@ -1,0 +1,29 @@
+name: Run first test in CI
+
+on:
+  push:
+    branches:
+      - 'homework_10'
+  pull_request:
+    branches:
+      - 'homework_10'
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.15.0
+      - name: Folder
+        run: cd ./homework_10
+      - name: Dependencies
+        working-directory: ./homework_10
+        run: npm i
+      - name: Run tests
+        working-directory: ./homework_10
+        run: npm test
