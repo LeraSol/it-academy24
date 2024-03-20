@@ -1,18 +1,30 @@
 //фибоначчи
-function fib(n, m) {
-    let a= 0;
-    let b  = 1;
+function numbersOfFibonachi (n, m) {
+    function fibonachi(n) {
+        return n <= 1 ? n : fibonachi(n - 1) + fibonachi(n - 2);
+    }
+    let a = fibonachi(n);
+    let b = fibonachi(n+1);
     let arr = [a, b];
     let c;
-    for (let i = n; i < (n+m); i++) {
-        c = a+b;
+    for (let i = 2; i <= m; i++) {
+        if (arr.length === m) {
+            break;
+        }
+        c = a + b;
         arr.push(c);
         a = b;
         b = c;
     }
-    return arr;
+    if (arr.length > m) {
+        arr.pop();
+        return arr;
+    }
+    else {
+        return arr;
+    }
 }
-console.log(fib(3, 7));
+console.log(numbersOfFibonachi(6, 1))
 
 //вставить данные в массив с заданного места
 
