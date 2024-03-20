@@ -8,9 +8,6 @@ function numbersOfFibonachi (n, m) {
     let arr = [a, b];
     let c;
     for (let i = 2; i <= m; i++) {
-        if (arr.length === m) {
-            break;
-        }
         c = a + b;
         arr.push(c);
         a = b;
@@ -24,7 +21,7 @@ function numbersOfFibonachi (n, m) {
         return arr;
     }
 }
-console.log(numbersOfFibonachi(6, 1))
+console.log(numbersOfFibonachi(6, 2))
 
 //вставить данные в массив с заданного места
 
