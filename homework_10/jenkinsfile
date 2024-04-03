@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scmGit(branches: [[name: '*/homework_10']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/LeraSol/it-academy24.git']])
+            }
+        }
+
+        stage('Dependencies') {
+            steps{
+               dir('homework_10') {
+                   bat "npm i"
+               }
+            }
+        }
+        stage('Tests') {
+            steps {
+            dir('homework_10') {
+                   bat "npm run test"
+               }
+           }
+    }
+}
+}
