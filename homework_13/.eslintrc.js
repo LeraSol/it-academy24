@@ -5,7 +5,7 @@ module.exports = {
     es2021: true,
     mocha: true,
   },
-  extends: ['airbnb-base'],
+  extends: ['airbnb-base', 'plugin:wdio/recommended'],
   overrides: [
     {
       env: {
@@ -113,6 +113,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-  ],
+  plugins: ['wdio', 'webdriverio'],
 };

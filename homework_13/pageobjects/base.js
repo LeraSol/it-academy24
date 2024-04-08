@@ -1,5 +1,5 @@
 class Base {
-  async navigate (url) {
+  async navigate(url) {
     await browser.url(url);
   }
 }

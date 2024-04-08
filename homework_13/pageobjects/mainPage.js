@@ -1,23 +1,22 @@
 const Base = require('./base');
 
 class MainPage extends Base {
-
-  async getSuggestBackersByName(backersName){
-    return $(`//*[@id="backers"]//a[contains(@href,'${backersName}')]`)
+  async getSuggestBackersByName(backersName) {
+    return $(`//*[@id="backers"]//a[contains(@href,'${backersName}')]`);
   }
-  async getSuggestFeatureByName(featureName){
-    return $(`//*[contains(text(),'${featureName}')]`)
+  async getSuggestFeatureByName(featureName) {
+    return $(`//*[contains(text(),'${featureName}')]`);
   }
 
-  async getSuggestTableOfContentsByName(tableOfContents){
+  async getSuggestTableOfContentsByName(tableOfContents) {
     return $(`//*[@id="content"]//a[contains(text(),'${tableOfContents}')]`);
-  };
-  async gotoSuggestFeatureByName(featureName){
+  }
+  async gotoSuggestFeatureByName(featureName) {
     await (await this.getSuggestFeatureByName(featureName)).waitForDisplayed();
     await (await this.getSuggestFeatureByName(featureName)).click();
   }
 
-  async gotoSuggestTableOfContentsByName(tableOfContents){
+  async gotoSuggestTableOfContentsByName(tableOfContents) {
     await (await this.getSuggestTableOfContentsByName(tableOfContents)).waitForDisplayed();
     await (await this.getSuggestTableOfContentsByName(tableOfContents)).click();
   }
