@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "npm run clear-folders && wdio run ./wdio.conf.js && npm run allure-open",
+    "allure-open": "npx allure generate && npx allure open",
+    "clear-folders": "rimraf \"allure-report\" \"allure-results\"",
+    "lint": "eslint --debug ./ --fix",
+    "lint:write": "eslint ./ --fix && npm run pretty",
+    "pretty": "prettier --write */**/*.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +21,15 @@
     "@wdio/mocha-framework": "^8.35.0",
     "@wdio/spec-reporter": "^8.32.4",
     "@wdio/visual-service": "^4.1.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
     "wdio-wait-for": "^3.0.11"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.27.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "rimraf": "^5.0.5"
   }
 }

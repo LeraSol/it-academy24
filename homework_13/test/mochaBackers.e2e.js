@@ -8,7 +8,7 @@ describe('Mocha BACKERS test', function() {
       {value: 'greenpromocode', result:'GreenPromoCode'}
     ]
   ).forEach(testData => {
-    it.skip(`should go to ${testData.value} in BACKERS`, async () => {
+    it(`should go to ${testData.value} in BACKERS`, async () => {
       await mainPage.navigate('https://mochajs.org/');
       await mainPage.gotoSuggestBackersByName(testData.value);
       await browser.switchWindow(testData.result);
