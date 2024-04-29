@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+require('ypress-iframe');
+
+Cypress.Commands.add('validateElementsText', (webElement, text) => {
+  webElement.each(($el) => {
+    cy.wrap($el).should('contain.text', text)
+  })
+})

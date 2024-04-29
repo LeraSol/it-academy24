@@ -3,11 +3,15 @@ const Base = require('../base')
 class LeftNavMenu extends Base {
 
   get firstLevelMenuItem(itemName) {
-    return cy.get(`//li[2]/a[contains(text(),'${itemName}')]`)
+    return cy.get(`.main-nav__list__li_wnav [href='/${itemName}/']`)
   }
 
-  goToPageByLeftNavMenu(firstLevelItemName){
-    this.firstLevelMenuItem(firstLevelItemName).click();
+  get secondLevelMenuItem(itemName) {
+    return cy.get(`//a[contains(@class,'menu-link-action') and text()='${itemName} ']`)
+  }
+
+  goToPageByLeftNavMenu(){
+    this.firstLevelMenuItem.click();
   }
 }
 

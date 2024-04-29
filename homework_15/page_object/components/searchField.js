@@ -14,7 +14,6 @@ class Search extends Base {
     this.searchField.type(text)
     this.searchCategories.eq(categoriesNumber).click()
   }
-
 }
 
 module.exports = new Search();
