@@ -3,16 +3,16 @@ const Base = require('../base')
 class Cart extends Base {
 
 
-  get firstBookButtonInCart() {
-    return cy.get(`article:nth-child(1) div.product-card__footer`);
+  get firstGameButtonInCart() {
+    return cy.get(`article:nth-child(1) button`);
   }
 
   get cartCount() {
     return cy.get(`#cart-count`);
   }
 
-  addFirstBookInCart() {
-    this.firstBookButtonInCart.click();
+  addFirstGameInCart() {
+    this.firstGameButtonInCart.click();
   }
 }
 module.exports = new Cart();

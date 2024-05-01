@@ -4,7 +4,6 @@ class MainPage extends Base {
 
 
 
-
 }
 
 module.exports = new MainPage();
