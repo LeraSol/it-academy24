@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no testOZ specified\\\" && exit 1",
     "wdio": "npm run clear-folders && wdio run ./wdio.conf.js",
     "allure-open": "npx allure generate && npx allure open",
     "clear-folders": "rimraf \"allure-report\" \"allure-results\""
@@ -19,5 +18,7 @@
     "@wdio/mocha-framework": "^8.36.1",
     "@wdio/spec-reporter": "^8.36.1",
     "@wdio/visual-service": "^4.1.2"
+  },
+  "dependencies": {
   }
 }

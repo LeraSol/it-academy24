@@ -1,18 +1,18 @@
-const { $ } = require('@wdio/globals')
+const { $, $$ } = require('@wdio/globals')
 const Base = require('../base');
 
 class Cart extends Base {
 
-  get buttonInCartOnPage () {
-    return $('article:nth-child(1) button')
+  async buttonInCartOnPage () {
+    return $$('.product-card__button');
   }
 
   get cartCount() {
     return $(`#cart-count`);
   }
 
-  async addItemInCart () {
-    await this.buttonInCartOnPage.waitForClickable();
+  async addItemInCart (numberItem) {
+    await this.buttonInCartOnPage[numberItem].waitForClickable();
     await this.buttonInCartOnPage.click();
     await this.cartCount.waitForDisplayed();
   }
