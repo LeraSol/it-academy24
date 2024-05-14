@@ -3,7 +3,7 @@ const Base = require('../base');
 
 class Cart extends Base {
 
-  async buttonInCartOnPage () {
+  get buttonInCartOnPage () {
     return $$('.product-card__button');
   }
 
@@ -12,8 +12,8 @@ class Cart extends Base {
   }
 
   async addItemInCart (numberItem) {
-    await this.buttonInCartOnPage[numberItem].waitForClickable();
-    await this.buttonInCartOnPage.click();
+    await this.buttonInCartOnPage[0].waitForClickable();
+    await this.buttonInCartOnPage[numberItem].click();
     await this.cartCount.waitForDisplayed();
   }
 }
