@@ -17,9 +17,9 @@ it('should filter page Books by author', async () =>{
   expect(await resultPage.productAuthorsAfterLeftFilter.getText()).toContain(TEXT.LEFT_FILTER_BOOKS_AUTHOR)
   });
 
-  it('should filter result page Books by published year after filter by author', async () =>{
+  it('should filter result page Books by published year', async () =>{
     await menu.goToPageByMenu(TEXT.FIRST_MENU_BOOKS);
     await filterLeftBooksPage.goLeftFilterByYear();
-    expect(await resultPage.productAuthorsAfterLeftFilter.getText()).toContain(TEXT.LEFT_FILTER_BOOKS_AUTHOR_AND_YEAR)
+    expect(await resultPage.productAuthorsAfterLeftFilter.getText()).toContain(TEXT.LEFT_FILTER_BOOKS_PUBLISHED_YEAR)
   });
 })

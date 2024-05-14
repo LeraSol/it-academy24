@@ -23,7 +23,7 @@ describe('Clean filter left of page Books tests', function() {
     await menu.goToPageByMenu(TEXT.FIRST_MENU_BOOKS);
     await filterLeftBooksPage.goLeftFilterByAuthorAndYear();
     await filterLeftBooksPage.goCleanFilterLeftYear();
-    expect(await filterTopPage.startTopFilterSettings.getText()).toEqual(TEXT.START_FILTER_SETTINGS_ON_TOP);
+    expect(await resultPage.productAuthorsAfterLeftFilter.getText()).toContain(TEXT.LEFT_FILTER_BOOKS_AUTHOR);
   });
 
   it('should clean filters on left author and year after filter page Books by author and published year', async () =>{
