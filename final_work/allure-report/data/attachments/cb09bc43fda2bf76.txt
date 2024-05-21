@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": ".fm-clear-link.trash"
-}

@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": ".main-nav__list__item[href='/boardgames/']"
-}

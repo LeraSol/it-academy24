@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": ".digi-ac-query__name"
-}

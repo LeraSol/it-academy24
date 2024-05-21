@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": ".dp-showresults__content"
-}

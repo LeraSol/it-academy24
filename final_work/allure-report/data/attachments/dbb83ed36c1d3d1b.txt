@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": ".top-filters__eselect__item.top-filters__viewer__open"
-}
