@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "POST Oz",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "string"
+    },
+    "html": {
+      "type": "string"
+    },
+    "more": {
+      "type": "string"
+    },
+    "total": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "success",
+    "html",
+    "more",
+    "total"
+  ]
+}
