@@ -28,11 +28,11 @@ class LoginPage extends Base {
     }
 
     async login (username="", password="") {
-        await this.loginButton.click();
-        await this.emailButton.click();
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnLogin.click();
+        await this.baseClick(this.loginButton);
+        await this.baseClick(this.emailButton);
+        await this.baseSetValue(this.inputUsername, username);
+        await this.baseSetValue(this.inputPassword, password);
+        await this.baseClick(this.btnLogin);
     }
 }
 

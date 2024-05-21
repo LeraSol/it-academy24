@@ -5,16 +5,16 @@ exports.config = {
         './testOZ/**/*.js'
     ],
     exclude: [
-        // './testOZ/login.e2e.js',
-        // './testOZ/search.e2e.js',
-        // './testOZ/addOneInCart.e2e.js',
-        // './testOZ/addTwoInCart.e2e.js',
-        // './testOZ/filterTopPage.e2e.js',
-        // './testOZ/filterLeftOneByOneBooksPage.e2e.js',
-        // './testOZ/filterLeftTwoBooksPage.e2e.js',
-        // './testOZ/cleanFilterTopBooksPage.e2e.js',
-        // // './testOZ/cleanFilterLeftBooksPage.e2e.js',
-        // './testOZ/cleanAllFilterTopBooksPage.e2e.js',
+        //'./testOZ/login.e2e.js',
+        //'./testOZ/search.e2e.js',
+        //'./testOZ/addOneInCart.e2e.js',
+        //'./testOZ/addTwoInCart.e2e.js',
+        //'./testOZ/filterTopPage.e2e.js',
+        //'./testOZ/filterLeftOneByOne.e2e.js',
+        //'./testOZ/filterLeftTwo.e2e.js',
+        //'./testOZ/cleanFilterTop.e2e.js',
+        //'./testOZ/cleanFilterLeft.e2e.js',
+        //'./testOZ/cleanAllFilterTop.e2e.js',
     ],
     maxInstances: 1,
 
@@ -85,7 +85,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -105,7 +105,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 80000
+        timeout: 500000
     },
 
     //
@@ -252,22 +252,22 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {string} oldSessionId session ID of the old session
-    * @param {string} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {string} oldSessionId session ID of the old session
+     * @param {string} newSessionId session ID of the new session
+     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
     /**
-    * Hook that gets executed before a WebdriverIO assertion happens.
-    * @param {object} params information about the assertion to be executed
-    */
+     * Hook that gets executed before a WebdriverIO assertion happens.
+     * @param {object} params information about the assertion to be executed
+     */
     // beforeAssertion: function(params) {
     // }
     /**
-    * Hook that gets executed after a WebdriverIO assertion happened.
-    * @param {object} params information about the assertion that was executed, including its results
-    */
+     * Hook that gets executed after a WebdriverIO assertion happened.
+     * @param {object} params information about the assertion that was executed, including its results
+     */
     // afterAssertion: function(params) {
     // }
 }

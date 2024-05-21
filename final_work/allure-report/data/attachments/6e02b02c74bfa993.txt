@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": ".top-filters__sqcheckers.top-filters__sqcheckers--flat"
+}

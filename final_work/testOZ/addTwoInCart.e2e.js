@@ -5,7 +5,7 @@ const search = require('../pageobjects/components/search');
 
 describe('Add in cart tests', function() {
 
-  it('add two items in second menu Boardgames > Квесты in cart', async () =>{
+  it('add two items in cart', async () =>{
     await search.navigate(TEXT.URL);
     await menu.goToPageByMenu(TEXT.FIRST_MENU_BOARDGAMES, TEXT.SECOND_MENU_BOARDGAMES);
     await cart.addItemInCart(0);

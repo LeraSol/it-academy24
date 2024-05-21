@@ -19,57 +19,18 @@ class FilterLeftBooksPage extends Base {
     return $$('.fm-clear-link.trash');
   }
 
-  async goLeftFilterByAuthor() {
-    await this.filterByAuthor[0].click();
+  async goLeftFilterBy(selector) {
+    await this.baseClick(selector);
     await this.seeResultAfterLeftFilter.moveTo();
-    await this.seeResultAfterLeftFilter.waitForDisplayed();
-    await this.seeResultAfterLeftFilter.click();
+    await this.baseClick(this.seeResultAfterLeftFilter);
   }
 
-  async goLeftFilterByYear() {
-    await this.filterByYear[0].click();
-    await this.seeResultAfterLeftFilter.moveTo();
-    await this.seeResultAfterLeftFilter.waitForDisplayed();
-    await this.seeResultAfterLeftFilter.click();
-  }
-
-  async goLeftFilterByAuthorAndYear() {
-    await this.filterByAuthor[0].click();
-    await this.filterByYear[0].click();
-    await this.seeResultAfterLeftFilter.moveTo();
-    await this.seeResultAfterLeftFilter.waitForDisplayed();
-    await this.seeResultAfterLeftFilter.click();
-  }
-
-  async goCleanFilterLeftAuthor () {
-    await this.filterByAuthor[0].moveTo();
-    await this.cleanFilterLeft[0].waitForClickable();
-    await this.cleanFilterLeft[0].click();
-    await this.seeResultAfterLeftFilter.moveTo();
-    await this.seeResultAfterLeftFilter.waitForDisplayed();
-    await this.seeResultAfterLeftFilter.click();
-
-  }
-
-  async goCleanFilterLeftYear () {
-    await this.filterByYear[0].moveTo();
-    await this.cleanFilterLeft[1].waitForClickable();
-    await this.cleanFilterLeft[1].click();
-    await this.seeResultAfterLeftFilter.moveTo();
-    await this.seeResultAfterLeftFilter.waitForDisplayed();
-    await this.seeResultAfterLeftFilter.click();
-  }
-
-  async goCleanFilterLeftAuthorAndYear () {
-    await this.filterByAuthor[0].moveTo();
-    await this.cleanFilterLeft[0].waitForDisplayed();
-    await this.cleanFilterLeft[0].click();
-    await this.filterByYear[0].moveTo();
-    await this.cleanFilterLeft[1].waitForClickable();
-    await this.cleanFilterLeft[1].click();
-    await this.seeResultAfterLeftFilter.moveTo();
-    await this.seeResultAfterLeftFilter.waitForDisplayed();
-    await this.seeResultAfterLeftFilter.click();
+  async goCleanFilterLeft (selector, number) {
+      await (await selector).moveTo();
+      await (await this.cleanFilterLeft[number]).waitForDisplayed();
+      await this.baseClick(await this.cleanFilterLeft[number]);
+      await this.seeResultAfterLeftFilter.moveTo();
+      await this.baseClick(this.seeResultAfterLeftFilter);
   }
 }
 

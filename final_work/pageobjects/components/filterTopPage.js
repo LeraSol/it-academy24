@@ -28,22 +28,24 @@ class FilterTopPage extends Base {
   }
 
   async goFilterByCheapPrice() {
-    await this.filterButton.click();
-    await this.filterByCheapPriceButton.click();
+    await this.filterButton.moveTo()
+    await this.baseClick(await this.filterButton);
+    await this.baseClick(await this.filterByCheapPriceButton);
   }
 
   async goFilterByRating() {
-    await this.filterButton.click();
-    await this.filterByRatingButton.click();
+    await this.filterButton.moveTo()
+    await this.baseClick(await this.filterButton);
+    await this.baseClick(await this.filterByRatingButton);
   }
 
   async goCleanFiltersTop(firstFilter, secondFilter) {
-    await this.cleanFilterTop[firstFilter].click();
-    await this.cleanFilterTop[secondFilter].click();
+    await this.baseClick(await this.cleanFilterTop[firstFilter]);
+    await this.baseClick(await this.cleanFilterTop[secondFilter]);
   }
 
   async goCleanAllFiltersTop() {
-    await this.cleanAllFiltersTop.click();
+    await this.baseClick(await this.cleanAllFiltersTop);
   }
 }
 

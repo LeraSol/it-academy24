@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": ".i-input-group__cell input[placeholder='Электронная почта']"
+}

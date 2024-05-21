@@ -5,7 +5,7 @@ const search = require('../pageobjects/components/search');
 
 describe('Add in cart tests', function() {
 
-  it('add one item in first menu Books in cart', async () =>{
+  it('add one item in cart', async () =>{
     await search.navigate(TEXT.URL);
     await menu.goToPageByMenu(TEXT.FIRST_MENU_BOOKS);
     await cart.addItemInCart(0);

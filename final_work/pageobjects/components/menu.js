@@ -21,10 +21,10 @@ class Menu extends Base {
     }
     await (await this.getFirstMenuItem(firstLevelItemName)).moveTo();
     if(await (await this.getSecondMenuItem(secondLevelItemName)).isDisplayed()) {
-      await (await this.getSecondMenuItem(secondLevelItemName)).click();
+      await this.baseClick(await this.getSecondMenuItem(secondLevelItemName));
     }
     else {
-      await (await this.getFirstMenuItem(firstLevelItemName)).click();
+      await this.baseClick(await this.getFirstMenuItem(firstLevelItemName));
     }
   }
 }

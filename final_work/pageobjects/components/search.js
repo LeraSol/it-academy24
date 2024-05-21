@@ -25,22 +25,22 @@ class Search extends Base {
 
   async lookByOftenSearched (text){
     await this.searchButton.setValue(text);
-    await this.oftenSearched[0].click();
+    await this.baseClick(await this.oftenSearched[0]);
   }
 
   async lookByPopularItems (text){
     await this.searchButton.setValue(text);
-    await this.searchInPopularItems[0].click();
+    await this.baseClick(await this.searchInPopularItems[0]);
   }
 
   async lookByCategories (text){
     await this.searchButton.setValue(text);
-    await this.searchCategories[0].click();
+    await this.baseClick(await this.searchCategories[0]);
   }
 
   async lookAllResults (text){
     await this.searchButton.setValue(text);
-    await this.allResults[0].click();
+    await this.baseClick(await this.allResults[0]);
   }
 }
 

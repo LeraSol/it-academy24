@@ -12,8 +12,7 @@ class Cart extends Base {
   }
 
   async addItemInCart (numberItem) {
-    await this.buttonInCartOnPage[0].waitForClickable();
-    await this.buttonInCartOnPage[numberItem].click();
+    await this.baseClick(this.buttonInCartOnPage[numberItem]);
     await this.cartCount.waitForDisplayed();
   }
 }

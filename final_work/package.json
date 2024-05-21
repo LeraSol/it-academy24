@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "wdio": "npm run clear-folders && wdio run ./wdio.conf.js npm run allure-open",
+    "wdio": "wdio run ./wdio.conf.js",
     "allure-open": "npx allure generate && npx allure open",
     "clear-folders": "rimraf \"allure-report\" \"allure-results\""
   },
@@ -18,5 +18,8 @@
     "@wdio/mocha-framework": "^8.36.1",
     "@wdio/spec-reporter": "^8.36.1",
     "@wdio/visual-service": "^4.1.2"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.29.0"
   }
 }

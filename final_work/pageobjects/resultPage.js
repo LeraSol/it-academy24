@@ -1,4 +1,4 @@
-const { $, $$ } = require('@wdio/globals')
+const { $, $$, browser } = require('@wdio/globals')
 const Base = require('./base');
 
 class ResultPage extends Base {
@@ -11,7 +11,7 @@ class ResultPage extends Base {
     return $('.b-product-title__heading');
   }
 
-  get productAuthorsAfterLeftFilter() {
+  get itemDescription() {
     return $$('.product-card__subtitle')[0];
   }
 }

@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".i-input-group__popover_visible > div\"}\n  (Session info: chrome=124.0.6367.209)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF65A421532+60802]\n\t(No symbol) [0x00007FF65A39AC32]\n\t(No symbol) [0x00007FF65A257CE4]\n\t(No symbol) [0x00007FF65A2A6D4D]\n\t(No symbol) [0x00007FF65A2A6E1C]\n\t(No symbol) [0x00007FF65A2ECE37]\n\t(No symbol) [0x00007FF65A2CABBF]\n\t(No symbol) [0x00007FF65A2EA224]\n\t(No symbol) [0x00007FF65A2CA923]\n\t(No symbol) [0x00007FF65A298FEC]\n\t(No symbol) [0x00007FF65A299C21]\n\tGetHandleVerifier [0x00007FF65A7241CD+3217949]\n\tGetHandleVerifier [0x00007FF65A766167+3488183]\n\tGetHandleVerifier [0x00007FF65A75F0EF+3459391]\n\tGetHandleVerifier [0x00007FF65A4DB8F6+823622]\n\t(No symbol) [0x00007FF65A3A5FCF]\n\t(No symbol) [0x00007FF65A3A0EF4]\n\t(No symbol) [0x00007FF65A3A1082]\n\t(No symbol) [0x00007FF65A3918D4]\n\tBaseThreadInitThunk [0x00007FFFC67553E0+16]\n\tRtlUserThreadStart [0x00007FFFC7D0485B+43]\n"
+}
